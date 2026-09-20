@@ -45,8 +45,9 @@
     
     // Python specific
     "[python]": {
-        "editor.tabSize": 2
-        // "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
     },
 
     // ms-python.vscode-python-envs Extension specific (opt-in for usage)
@@ -73,8 +74,15 @@
         "dist"
     ],
     "ruff.configuration": {
-        //"indent-width": 2,
+        "indent-width": 2,
         "line-length": 120,
+         "lint": {
+            "extend-select": ["D", "ANN"], // Enforce type checking and docsting (google style)
+            "ignore": ["ANN101", "ANN102"], // Supress self in instance methods and cls in class methods
+            "pydocstyle": {
+                "convention": "google"
+            }
+        },
         "format": {
             "indent-style": "space",
             "quote-style": "double",
