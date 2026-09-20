@@ -1,0 +1,85 @@
+{
+    // General VSCode
+    "editor.mouseWheelZoom": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    
+    "chat.viewSessions.orientation": "stacked",
+    "chat.disableAIFeatures": true,
+
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": false
+    },
+    
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Dark Modern",
+    
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+      "**/__pycache__": true,
+      "**/.git": true,
+      "**/.venv": true
+    },
+
+    // FanaticPythoner.better-todo-tree extension specific
+    "better-todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "DELETE_ME"
+    ],
+    "better-todo-tree.filtering.excludeGlobs": [
+      "**/node_modules/*/**",
+      "**/.venv/*/**"
+    ],
+    
+    // Python specific
+    "[python]": {
+        "editor.tabSize": 2
+        // "editor.insertSpaces": true,
+    },
+
+    // ms-python.vscode-python-envs Extension specific (opt-in for usage)
+    "python.useEnvironmentsExtension": true,
+    
+    // Claude extension specific
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.hideOnboarding": true,
+
+    // charliermarsh.ruff extension specific 
+    "ruff.importStrategy": "useBundled",
+    "ruff.configurationPreference": "editorOnly",
+    "ruff.format.preview": true,
+    "ruff.lineLength": 120,
+    "ruff.exclude": [
+        "venv",
+        ".venv",
+        "env",
+        ".git",
+        "site-packages",
+        "**/tests/**",
+        "__pycache__",
+        "build",
+        "dist"
+    ],
+    "ruff.configuration": {
+        //"indent-width": 2,
+        "line-length": 120,
+        "format": {
+            "indent-style": "space",
+            "quote-style": "double",
+            "docstring-code-format": true,
+            "docstring-code-line-length": "dynamic"
+        }
+    }
+}

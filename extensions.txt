@@ -1,0 +1,9 @@
+ms-python.python
+ms-python.debugpy
+ms-python.vscode-pylance
+ms-python.vscode-python-envs
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode.remote-explorer
+charliermarsh.ruff // Formatter, linter and more
+fanaticpythoner.better-todo-tree
