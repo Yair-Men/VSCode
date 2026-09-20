@@ -5,5 +5,5 @@ ms-python.vscode-python-envs
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode.remote-explorer
-charliermarsh.ruff // Formatter, linter and more
+charliermarsh.ruff
 fanaticpythoner.better-todo-tree
