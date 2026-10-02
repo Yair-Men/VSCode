@@ -59,7 +59,7 @@
 
     // charliermarsh.ruff extension specific 
     "ruff.importStrategy": "useBundled",
-    "ruff.configurationPreference": "editorOnly",
+    "ruff.configurationPreference": "filesystemFirst",
     "ruff.format.preview": true,
     "ruff.lineLength": 120,
     "ruff.exclude": [
@@ -77,10 +77,20 @@
         "indent-width": 2,
         "line-length": 120,
          "lint": {
-            "extend-select": ["D", "ANN"], // Enforce type checking and docsting (google style)
-            "ignore": ["ANN101", "ANN102"], // Supress self in instance methods and cls in class methods
+            "extend-select": [ // Enforcments
+                "D", // Docsting
+                "ANN", // Type checking
+                "I" // Imports sorting
+            ],
+            "ignore": [ // Supress
+                "ANN101", "ANN102", // self (in instance methods) and cls (in class methods) return type annotaions
+                "D100", // docstring in public module (only in the top of the page)
+                "D101", // docstring in public class
+                "D107", // undocumented __init__
+                "ANN204" // return type annontation special methods (i.e. __init__, __new__,  __call__)
+            ], 
             "pydocstyle": {
-                "convention": "google"
+                "convention": "google" // Docstring google style
             }
         },
         "format": {
