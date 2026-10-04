@@ -21,7 +21,7 @@ Both exit `0` and print nothing when the codebase is clean. Add `--diff` to the 
 ## Applying fixes (optional)
  
 ```bash
-uvx ruff  check --fix /PATH/TO/PROJECT
+uvx ruff --config /PATH/TO/RUFF-SWEEP.TOML check --fix /PATH/TO/PROJECT
 uvx ruff --config /PATH/TO/RUFF-SWEEP.TOML format /PATH/TO/PROJECT
 ```
  
