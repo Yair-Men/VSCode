@@ -77,10 +77,10 @@
     ],
     "ruff.configuration": {
         "indent-width": 2,
-        "line-length": 120,
+        "line-length": 100,
          "lint": {
             "extend-select": [ // Enforcments
-                "D", // Docsting
+                "D", // Docstring
                 "ANN", // Type checking
                 "I" // Imports sorting
             ],

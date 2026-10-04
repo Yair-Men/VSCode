@@ -1,0 +1,37 @@
+# Standalone ruff config for CLI "sweep" checks of an entire codebase.
+# Invoked with --config so it ignores any project-local ruff/pyproject config
+# and any editor settings. See README.md.
+
+# src = ["/home/user/projec"] # set full path to the project to resolve imports sorting correctly
+target-version = "py313"   # sets pyupgrade behavior; match the project you scan
+
+line-length = 100
+indent-width = 2
+
+extend-exclude = [
+  "venv", ".venv", "env", ".git", "site-packages",
+  "__pycache__", "build", "dist",
+  "**/tests/**",
+  "*.md",   # ruff reformats python code blocks inside markdown; keep docs untouched
+]
+
+[lint]
+extend-select = ["D", "ANN", "I"]   # docstrings, annotations, import-sorting
+ignore = [
+  # "ANN101", "ANN102", # self (in instance methods) and cls (in class methods) return type annotaions
+  # "BLE001", # Broad exception (Except exception)
+  "ANN204", # return type annontation special methods (i.e. __init__, __new__,  __call__)
+  "D100",   # docstring in public module (only in the top of the page)
+  "D101",   # docstring in public class
+  "D107"    # docstring in __init__
+]
+
+[lint.pydocstyle]
+convention = "google"
+
+[format]
+preview = true
+indent-style = "space"
+quote-style = "double"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
