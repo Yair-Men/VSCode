@@ -19,6 +19,7 @@
     
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Dark Modern",
+    "workbench.editor.labelFormat": "short", // set parent directory name in opened tabs
     
     "search.useIgnoreFiles": false,
     "search.exclude": {
