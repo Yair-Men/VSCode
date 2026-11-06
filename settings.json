@@ -64,7 +64,6 @@
     // charliermarsh.ruff extension specific 
     "ruff.importStrategy": "useBundled",
     "ruff.configurationPreference": "filesystemFirst",
-    "ruff.format.preview": true,
     "ruff.exclude": [
         "venv",
         ".venv",
