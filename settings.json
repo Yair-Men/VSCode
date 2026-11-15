@@ -60,6 +60,8 @@
     // Claude extension specific
     "claudeCode.preferredLocation": "panel",
     "claudeCode.hideOnboarding": true,
+    "claudeCode.attachOpenFile": false,
+    "claudeCode.respectGitIgnore": false,
 
     // charliermarsh.ruff extension specific 
     "ruff.importStrategy": "useBundled",
